@@ -1,0 +1,32 @@
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore data files (optional)
+datasets/
+*.csv
+*.png
+*.jpg
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+models/best_vgg16_brain_tumor.h5
+models/lung_vgg16_finetuned_model.h5
+
+# Add the keras files to .gitignore
+@"
+models/*.keras
+*.keras
+models/best_breast_model.keras
+models/final_breast_vgg16_model.keras
+"@ | Out-File -FilePath .gitignore -Append -Encoding utf8
